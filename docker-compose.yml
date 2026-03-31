@@ -22,8 +22,12 @@ services:
       dockerfile: docker/Dockerfile
       target: runtime
     environment:
+      VIRTUAL_HOST: notesound.codewizard.dk
+      VIRTUAL_PORT: 80
+      CLIENT_MAX_BODY_SIZE: 25m
       NOTESOUND_DATABASE_URL: postgresql+psycopg://notesound:notesound@db:5432/notesound
       NOTESOUND_ARTIFACTS_DIR: /app/data/artifacts
+      NOTESOUND_MAX_UPLOAD_SIZE_BYTES: 26214400
     ports:
       - "8000:80"
     depends_on:
@@ -32,6 +36,11 @@ services:
     command: ["/app/docker/start-api.sh"]
     volumes:
       - ./data:/app/data
+    # If your nginx-proxy runs on a shared external Docker network, attach this
+    # service to that network as well and replace the network name if needed.
+    # networks:
+    #   - default
+    #   - nginx-proxy
 
   test:
     build:
@@ -45,3 +54,7 @@ services:
 
 volumes:
   postgres_data:
+
+# networks:
+#   nginx-proxy:
+#     external: true

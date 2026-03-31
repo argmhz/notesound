@@ -27,6 +27,17 @@ docker compose run --rm test
 API-containeren venter på, at PostgreSQL er klar, før den kører migrations og starter serveren.
 API'en lytter internt i containeren på port `80` og eksponeres via Compose som `localhost:8000`.
 
+### nginx-proxy Deployment
+
+Til `nginxproxy/nginx-proxy` er `api`-servicen sat op med:
+
+- `VIRTUAL_HOST=notesound.codewizard.dk`
+- `VIRTUAL_PORT=80`
+- `CLIENT_MAX_BODY_SIZE=25m`
+- `NOTESOUND_MAX_UPLOAD_SIZE_BYTES=26214400`
+
+Hvis din proxy bruger et delt eksternt Docker-netværk, skal `api`-servicen også tilknyttes det netværk. Der er en kommenteret sektion i [docker-compose.yml](./docker-compose.yml), som kan aktiveres og tilpasses til det rigtige netværksnavn.
+
 ## Lokal kørsel
 
 ```bash
