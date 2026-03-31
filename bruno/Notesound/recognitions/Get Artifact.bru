@@ -1,0 +1,19 @@
+meta {
+  name: Get Artifact
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/recognitions/{{jobId}}/artifacts/{{artifactName}}
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: */*
+}
+
+docs {
+  artifactName can be original, preprocessed, preview or musicxml depending on what the job produced.
+}

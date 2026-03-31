@@ -1,0 +1,47 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: notesound
+      POSTGRES_USER: notesound
+      POSTGRES_PASSWORD: notesound
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U notesound -d notesound"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 5s
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: runtime
+    environment:
+      NOTESOUND_DATABASE_URL: postgresql+psycopg://notesound:notesound@db:5432/notesound
+      NOTESOUND_ARTIFACTS_DIR: /app/data/artifacts
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    command: ["/app/docker/start-api.sh"]
+    volumes:
+      - ./data:/app/data
+
+  test:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: test
+    environment:
+      NOTESOUND_DATABASE_URL: sqlite:////tmp/notesound-test.db
+      NOTESOUND_ARTIFACTS_DIR: /tmp/artifacts
+    command: ["pytest", "-q"]
+
+volumes:
+  postgres_data:

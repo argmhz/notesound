@@ -1,0 +1,19 @@
+meta {
+  name: Get Recognition Audio
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/recognitions/{{jobId}}/audio?tempo_bpm=120
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: audio/wav
+}
+
+docs {
+  Returns a synthesized WAV rendering of the recognized melody. Use download=true to force a file download.
+}

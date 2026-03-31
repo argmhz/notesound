@@ -1,0 +1,19 @@
+meta {
+  name: Get Recognition Status
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/recognitions/{{jobId}}
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/json
+}
+
+docs {
+  Uses the jobId variable from the Local environment.
+}

@@ -1,0 +1,6 @@
+.git
+.pytest_cache
+.venv
+__pycache__
+data
+notesound.db

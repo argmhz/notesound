@@ -1,0 +1,19 @@
+meta {
+  name: Get Recognition Result
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/recognitions/{{jobId}}/result
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/json
+}
+
+docs {
+  Call this after the job status is succeeded.
+}

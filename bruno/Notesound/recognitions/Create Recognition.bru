@@ -1,0 +1,26 @@
+meta {
+  name: Create Recognition
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/v1/recognitions
+  body: multipart-form
+  auth: none
+}
+
+headers {
+  Accept: application/json
+}
+
+body:multipart-form {
+  image: @file({{imagePath}})
+  expected_clef:
+  crop_mode:
+  return_artifacts: true
+}
+
+docs {
+  Upload a sheet music image. Save the returned job_id into the Local environment before running the status/result requests.
+}
