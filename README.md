@@ -25,6 +25,7 @@ docker compose run --rm test
 ```
 
 API-containeren venter på, at PostgreSQL er klar, før den kører migrations og starter serveren.
+API'en lytter internt i containeren på port `80` og eksponeres via Compose som `localhost:8000`.
 
 ## Lokal kørsel
 

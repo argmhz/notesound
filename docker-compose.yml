@@ -25,7 +25,7 @@ services:
       NOTESOUND_DATABASE_URL: postgresql+psycopg://notesound:notesound@db:5432/notesound
       NOTESOUND_ARTIFACTS_DIR: /app/data/artifacts
     ports:
-      - "8000:8000"
+      - "8000:80"
     depends_on:
       db:
         condition: service_healthy

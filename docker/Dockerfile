@@ -30,7 +30,7 @@ FROM base AS runtime
 RUN pip install .
 RUN chmod +x /app/docker/start-api.sh
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
 
 FROM base AS test
 
