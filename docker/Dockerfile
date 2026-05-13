@@ -21,6 +21,8 @@ COPY app /app/app
 COPY alembic /app/alembic
 COPY alembic.ini /app/alembic.ini
 COPY docker /app/docker
+COPY samples /app/samples
+COPY scripts /app/scripts
 COPY tests /app/tests
 
 RUN pip install --upgrade pip

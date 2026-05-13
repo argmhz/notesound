@@ -1,0 +1,2219 @@
+{
+  "job_id": "img20260427221856",
+  "status": "succeeded",
+  "input": {
+    "filename": "original.jpg",
+    "content_type": "image/jpeg",
+    "size_bytes": 4403276,
+    "width": 3072,
+    "height": 4096,
+    "preprocess_metrics": {
+      "width": 3072,
+      "height": 4096,
+      "brightness": 127.44713028271993,
+      "contrast": 38.2185531866457,
+      "skew_angle_deg": 0.0,
+      "perspective_score": 0.5971648935413391
+    }
+  },
+  "warnings": [
+    "homr wrote MusicXML outside the dedicated OMR output directory; artifact was normalized.",
+    "omr mode selected: original",
+    "omr mode scores: original=7.50, enhanced=7.50, binary=5.50"
+  ],
+  "confidence": 0.95,
+  "artifacts": [
+    {
+      "name": "original",
+      "kind": "original",
+      "path": "samples/cases/img20260427221856/original.jpg",
+      "content_type": "image/jpeg",
+      "size_bytes": 4403276,
+      "url": null
+    },
+    {
+      "name": "preprocessed",
+      "kind": "preprocessed",
+      "path": "samples/cases/img20260427221856/preprocess/preprocessed.png",
+      "content_type": "image/png",
+      "size_bytes": 3102183,
+      "url": null
+    },
+    {
+      "name": "preview",
+      "kind": "preview",
+      "path": "samples/cases/img20260427221856/preprocess/preview.png",
+      "content_type": "image/png",
+      "size_bytes": 431644,
+      "url": null
+    },
+    {
+      "name": "binary-input",
+      "kind": "debug",
+      "path": "samples/cases/img20260427221856/preprocess/binary_input.png",
+      "content_type": "image/png",
+      "size_bytes": 276312,
+      "url": null
+    },
+    {
+      "name": "musicxml",
+      "kind": "musicxml",
+      "path": "/app/samples/cases/img20260427221856/omr/result.musicxml",
+      "content_type": "application/octet-stream",
+      "size_bytes": 41115,
+      "url": null
+    },
+    {
+      "name": "original_teaser.png",
+      "kind": "debug",
+      "path": "/app/samples/cases/img20260427221856/omr/original/original_teaser.png",
+      "content_type": "image/png",
+      "size_bytes": 6081571,
+      "url": null
+    },
+    {
+      "name": "audio-raw",
+      "kind": "audio",
+      "path": "samples/cases/img20260427221856/audio/melody-120bpm-raw.wav",
+      "content_type": "audio/x-wav",
+      "size_bytes": 5953544,
+      "url": null
+    },
+    {
+      "name": "audio-quantized",
+      "kind": "audio",
+      "path": "samples/cases/img20260427221856/audio/melody-120bpm-quantized.wav",
+      "content_type": "audio/x-wav",
+      "size_bytes": 5953544,
+      "url": null
+    }
+  ],
+  "score": {
+    "format": "musicxml",
+    "musicxml_artifact_url": null,
+    "measures": 45,
+    "parts": 1,
+    "time_signature": "3/4",
+    "key_signature": "3"
+  },
+  "melody": {
+    "notes": [
+      {
+        "start_beat": 0.0,
+        "measure": 1,
+        "beat": 3.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 0.5,
+        "measure": 2,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 1.5,
+        "measure": 2,
+        "beat": 2.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 2.5,
+        "measure": 2,
+        "beat": 3.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 3.0,
+        "measure": 2,
+        "beat": 3.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 3.5,
+        "measure": 3,
+        "beat": 1.0,
+        "duration_beats": 2.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 5.5,
+        "measure": 3,
+        "beat": 3.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 6.0,
+        "measure": 3,
+        "beat": 3.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 6.5,
+        "measure": 4,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 7.5,
+        "measure": 4,
+        "beat": 2.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 9.0,
+        "measure": 4,
+        "beat": 3.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 9.5,
+        "measure": 5,
+        "beat": 1.0,
+        "duration_beats": 2.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 11.5,
+        "measure": 5,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 12.5,
+        "measure": 5,
+        "beat": 1.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 13.0,
+        "measure": 5,
+        "beat": 1.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 13.5,
+        "measure": 6,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 14.5,
+        "measure": 6,
+        "beat": 2.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 15.0,
+        "measure": 6,
+        "beat": 2.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 15.5,
+        "measure": 6,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 16.5,
+        "measure": 7,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 17.5,
+        "measure": 7,
+        "beat": 2.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 18.0,
+        "measure": 7,
+        "beat": 2.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 18.5,
+        "measure": 7,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 19.5,
+        "measure": 8,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 20.5,
+        "measure": 8,
+        "beat": 2.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 21.5,
+        "measure": 8,
+        "beat": 3.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 22.0,
+        "measure": 8,
+        "beat": 3.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 22.5,
+        "measure": 9,
+        "beat": 1.0,
+        "duration_beats": 3.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 25.5,
+        "measure": 10,
+        "beat": 1.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 26.0,
+        "measure": 10,
+        "beat": 1.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 26.5,
+        "measure": 10,
+        "beat": 2.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 27.5,
+        "measure": 10,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 28.5,
+        "measure": 11,
+        "beat": 1.0,
+        "duration_beats": 2.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 30.5,
+        "measure": 11,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 31.5,
+        "measure": 11,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 32.5,
+        "measure": 12,
+        "beat": 1.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 33.0,
+        "measure": 12,
+        "beat": 1.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 33.5,
+        "measure": 12,
+        "beat": 2.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 34.5,
+        "measure": 12,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 35.5,
+        "measure": 13,
+        "beat": 1.0,
+        "duration_beats": 3.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 38.5,
+        "measure": 13,
+        "beat": 1.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 39.0,
+        "measure": 14,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 40.0,
+        "measure": 14,
+        "beat": 2.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 40.5,
+        "measure": 14,
+        "beat": 2.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "A",
+          "alter": 0,
+          "octave": 4,
+          "midi": 69
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 41.0,
+        "measure": 14,
+        "beat": 3.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "A",
+          "alter": 0,
+          "octave": 4,
+          "midi": 69
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 41.5,
+        "measure": 14,
+        "beat": 3.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 42.0,
+        "measure": 15,
+        "beat": 1.0,
+        "duration_beats": 1.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 43.5,
+        "measure": 15,
+        "beat": 2.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 44.0,
+        "measure": 15,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 45.0,
+        "measure": 15,
+        "beat": 1.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 45.5,
+        "measure": 16,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 46.5,
+        "measure": 16,
+        "beat": 2.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 47.0,
+        "measure": 16,
+        "beat": 2.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "A",
+          "alter": 0,
+          "octave": 4,
+          "midi": 69
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 47.5,
+        "measure": 16,
+        "beat": 3.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "A",
+          "alter": 0,
+          "octave": 4,
+          "midi": 69
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 48.0,
+        "measure": 16,
+        "beat": 3.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 48.5,
+        "measure": 17,
+        "beat": 1.0,
+        "duration_beats": 2.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 50.5,
+        "measure": 17,
+        "beat": 3.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 51.0,
+        "measure": 17,
+        "beat": 3.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 51.5,
+        "measure": 18,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 52.5,
+        "measure": 18,
+        "beat": 2.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 53.0,
+        "measure": 18,
+        "beat": 2.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "A",
+          "alter": 0,
+          "octave": 4,
+          "midi": 69
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 53.5,
+        "measure": 18,
+        "beat": 3.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "A",
+          "alter": 0,
+          "octave": 4,
+          "midi": 69
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 54.0,
+        "measure": 18,
+        "beat": 3.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 54.5,
+        "measure": 19,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 55.5,
+        "measure": 19,
+        "beat": 2.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 56.5,
+        "measure": 19,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 57.5,
+        "measure": 19,
+        "beat": 1.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 58.0,
+        "measure": 20,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 59.0,
+        "measure": 20,
+        "beat": 2.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 60.0,
+        "measure": 20,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 61.0,
+        "measure": 20,
+        "beat": 1.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 61.5,
+        "measure": 21,
+        "beat": 1.0,
+        "duration_beats": 2.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 64.0,
+        "measure": 21,
+        "beat": 3.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 64.5,
+        "measure": 22,
+        "beat": 1.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 65.0,
+        "measure": 22,
+        "beat": 1.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 65.5,
+        "measure": 22,
+        "beat": 2.0,
+        "duration_beats": 1.5,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 67.0,
+        "measure": 22,
+        "beat": 3.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 67.5,
+        "measure": 23,
+        "beat": 1.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 68.0,
+        "measure": 23,
+        "beat": 1.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 68.5,
+        "measure": 23,
+        "beat": 2.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 69.5,
+        "measure": 23,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 70.5,
+        "measure": 23,
+        "beat": 1.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 71.0,
+        "measure": 24,
+        "beat": 1.0,
+        "duration_beats": 2.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 73.0,
+        "measure": 24,
+        "beat": 3.0,
+        "duration_beats": 2.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 75.0,
+        "measure": 24,
+        "beat": 2.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 75.5,
+        "measure": 24,
+        "beat": 2.5,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 76.5,
+        "measure": 24,
+        "beat": 3.5,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 77.5,
+        "measure": 25,
+        "beat": 1.0,
+        "duration_beats": 3.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 80.5,
+        "measure": 26,
+        "beat": 1.0,
+        "duration_beats": 3.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 83.5,
+        "measure": 27,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "B",
+          "alter": 0,
+          "octave": 4,
+          "midi": 71
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 84.5,
+        "measure": 27,
+        "beat": 2.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "B",
+          "alter": 0,
+          "octave": 4,
+          "midi": 71
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 85.5,
+        "measure": 27,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "B",
+          "alter": 0,
+          "octave": 4,
+          "midi": 71
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 86.5,
+        "measure": 28,
+        "beat": 1.0,
+        "duration_beats": 3.0,
+        "pitch": {
+          "step": "B",
+          "alter": 0,
+          "octave": 4,
+          "midi": 71
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 89.5,
+        "measure": 29,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "A",
+          "alter": 0,
+          "octave": 4,
+          "midi": 69
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 90.5,
+        "measure": 29,
+        "beat": 2.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "G",
+          "alter": 0,
+          "octave": 4,
+          "midi": 67
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 91.5,
+        "measure": 29,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 92.5,
+        "measure": 30,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "G",
+          "alter": 0,
+          "octave": 4,
+          "midi": 67
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 93.5,
+        "measure": 30,
+        "beat": 2.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 94.5,
+        "measure": 30,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 95.5,
+        "measure": 31,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 96.5,
+        "measure": 31,
+        "beat": 2.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 97.5,
+        "measure": 31,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "C",
+          "alter": 1,
+          "octave": 4,
+          "midi": 61
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 98.5,
+        "measure": 32,
+        "beat": 1.0,
+        "duration_beats": 3.0,
+        "pitch": {
+          "step": "B",
+          "alter": 0,
+          "octave": 4,
+          "midi": 71
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 101.5,
+        "measure": 33,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "A",
+          "alter": 0,
+          "octave": 4,
+          "midi": 69
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 102.5,
+        "measure": 33,
+        "beat": 2.0,
+        "duration_beats": 1.5,
+        "pitch": {
+          "step": "G",
+          "alter": 0,
+          "octave": 4,
+          "midi": 67
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 104.0,
+        "measure": 33,
+        "beat": 3.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 104.5,
+        "measure": 34,
+        "beat": 1.0,
+        "duration_beats": 1.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 106.0,
+        "measure": 34,
+        "beat": 2.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 106.5,
+        "measure": 34,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 107.5,
+        "measure": 35,
+        "beat": 1.0,
+        "duration_beats": 1.5,
+        "pitch": {
+          "step": "C",
+          "alter": 1,
+          "octave": 4,
+          "midi": 61
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 109.0,
+        "measure": 35,
+        "beat": 2.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "B",
+          "alter": 0,
+          "octave": 3,
+          "midi": 59
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 109.5,
+        "measure": 35,
+        "beat": 3.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "A",
+          "alter": 0,
+          "octave": 3,
+          "midi": 57
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 110.5,
+        "measure": 36,
+        "beat": 1.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "C",
+          "alter": 1,
+          "octave": 4,
+          "midi": 61
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 111.0,
+        "measure": 36,
+        "beat": 1.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "B",
+          "alter": 0,
+          "octave": 3,
+          "midi": 59
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 111.5,
+        "measure": 36,
+        "beat": 2.0,
+        "duration_beats": 2.0,
+        "pitch": {
+          "step": "B",
+          "alter": 0,
+          "octave": 3,
+          "midi": 59
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 113.5,
+        "measure": 37,
+        "beat": 1.0,
+        "duration_beats": 3.0,
+        "pitch": {
+          "step": "B",
+          "alter": 0,
+          "octave": 3,
+          "midi": 59
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 119.0,
+        "measure": 38,
+        "beat": 3.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 119.5,
+        "measure": 39,
+        "beat": 1.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 120.0,
+        "measure": 39,
+        "beat": 1.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 120.5,
+        "measure": 39,
+        "beat": 2.0,
+        "duration_beats": 1.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 122.0,
+        "measure": 39,
+        "beat": 3.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 122.5,
+        "measure": 40,
+        "beat": 1.0,
+        "duration_beats": 3.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 125.5,
+        "measure": 40,
+        "beat": 1.0,
+        "duration_beats": 2.0,
+        "pitch": {
+          "step": "C",
+          "alter": 1,
+          "octave": 5,
+          "midi": 73
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 127.5,
+        "measure": 41,
+        "beat": 1.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "F",
+          "alter": 1,
+          "octave": 4,
+          "midi": 66
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 127.5,
+        "measure": 41,
+        "beat": 1.0,
+        "duration_beats": 0.0,
+        "pitch": {
+          "step": "G",
+          "alter": 1,
+          "octave": 4,
+          "midi": 68
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 127.5,
+        "measure": 41,
+        "beat": 1.0,
+        "duration_beats": 0.0,
+        "pitch": {
+          "step": "A",
+          "alter": 0,
+          "octave": 4,
+          "midi": 69
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 127.5,
+        "measure": 41,
+        "beat": 1.0,
+        "duration_beats": 0.0,
+        "pitch": {
+          "step": "B",
+          "alter": 0,
+          "octave": 4,
+          "midi": 71
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 128.0,
+        "measure": 41,
+        "beat": 1.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 128.5,
+        "measure": 41,
+        "beat": 2.0,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "D",
+          "alter": 0,
+          "octave": 4,
+          "midi": 62
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 129.0,
+        "measure": 42,
+        "beat": 1.0,
+        "duration_beats": 1.0,
+        "pitch": {
+          "step": "C",
+          "alter": 1,
+          "octave": 4,
+          "midi": 61
+        },
+        "tie": null,
+        "accidental": "sharp",
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 130.0,
+        "measure": 42,
+        "beat": 2.0,
+        "duration_beats": 2.0,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      },
+      {
+        "start_beat": 134.5,
+        "measure": 43,
+        "beat": 3.5,
+        "duration_beats": 0.5,
+        "pitch": {
+          "step": "E",
+          "alter": 0,
+          "octave": 4,
+          "midi": 64
+        },
+        "tie": null,
+        "accidental": null,
+        "source_staff": 0,
+        "confidence": 0.75
+      }
+    ]
+  },
+  "tablature": {
+    "supported": false,
+    "reason": "Tablature is not implemented in the MVP."
+  }
+}

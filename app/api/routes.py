@@ -7,7 +7,12 @@ from app.api.deps import get_job_repository
 from app.core.config import get_settings
 from app.domain.schemas import ArtifactKind, JobStatus, RecognitionCreateResponse, RecognitionOptions, RecognitionResultPayload
 from app.repositories.jobs import JobRepository
-from app.services.music.synth import DEFAULT_TEMPO_BPM, render_melody_to_wav
+from app.services.music.synth import (
+    DEFAULT_TEMPO_BPM,
+    TIMING_MODE_QUANTIZED,
+    TIMING_MODE_RAW,
+    render_melody_to_wav,
+)
 from app.workers.runner import get_job_runner
 
 
@@ -84,6 +89,7 @@ def get_recognition_audio(
     job_id: str,
     repository: JobRepository = Depends(get_job_repository),
     tempo_bpm: int = Query(default=DEFAULT_TEMPO_BPM, ge=40, le=240),
+    timing_mode: str = Query(default=TIMING_MODE_RAW, pattern="^(raw|quantized)$"),
     download: bool = Query(default=False),
 ):
     job = repository.get_job(job_id)
@@ -96,15 +102,15 @@ def get_recognition_audio(
     if payload.melody is None or not payload.melody.notes:
         raise HTTPException(status_code=422, detail="Recognition result does not contain a playable melody.")
 
-    artifact_name = f"audio-wav-{tempo_bpm}"
+    artifact_name = f"audio-wav-{tempo_bpm}-{timing_mode}"
     existing = repository.get_artifact_by_name(job, artifact_name)
     if existing is not None and Path(existing.path).exists():
         audio_path = Path(existing.path)
     else:
         settings = get_settings()
-        audio_path = settings.artifacts_dir / job.id / "audio" / f"melody-{tempo_bpm}bpm.wav"
+        audio_path = settings.artifacts_dir / job.id / "audio" / f"melody-{tempo_bpm}bpm-{timing_mode}.wav"
         try:
-            render_melody_to_wav(payload.melody, audio_path, tempo_bpm=tempo_bpm)
+            render_melody_to_wav(payload.melody, audio_path, tempo_bpm=tempo_bpm, timing_mode=timing_mode)
         except ValueError as exc:
             raise HTTPException(status_code=422, detail=str(exc)) from exc
         repository.save_artifact(

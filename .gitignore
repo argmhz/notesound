@@ -18,3 +18,5 @@ htmlcov/
 .DS_Store
 data/
 notesound.db
+samples/inbox/*
+!samples/inbox/.gitkeep

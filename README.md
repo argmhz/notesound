@@ -6,12 +6,51 @@ FastAPI-baseret MVP til upload af nodebilleder, preprocess, OMR-transskription t
 
 Projektets MVP-spec findes i [specs/mvp-spec.md](./specs/mvp-spec.md).
 
+## Sample Eval
+
+MVP'ets næste prioritet er et lille sample/eval-datasæt. Se [samples/README.md](./samples/README.md).
+
+Hvis du bare vil teste et billede uden API'et:
+
+1. Læg billedet i `samples/inbox/`
+2. Kør:
+
+```bash
+docker compose -f docker-compose.local.yml run --rm test python scripts/process_inbox.py
+```
+
+Det genererer en case i `samples/cases/<image-navn>/` med preprocess-output, MusicXML, WAV-audio, `observed.json` og `expected.draft.json`.
+
+Lyt hurtigt til resultatet:
+
+```bash
+ffplay -autoexit -nodisp samples/cases/<case-id>/audio/melody-120bpm-raw.wav
+ffplay -autoexit -nodisp samples/cases/<case-id>/audio/melody-120bpm-quantized.wav
+```
+
+Kør lokal evaluering af cases med:
+
+```bash
+docker compose -f docker-compose.local.yml run --rm test python scripts/eval_samples.py
+```
+
+Scriptet forventer `expected.json` og eventuelt et `.musicxml` output i hver case-mappe.
+
 ## Bruno
 
 En Bruno collection ligger i [bruno/Notesound](./bruno/Notesound).  
 Brug environment-filen `Local.bru`, sæt `imagePath`, kør `Create Recognition`, og gem derefter `job_id` i `jobId`-variablen til status/result/audio/artifact requests.
 
 ## Docker
+
+Lokal Docker Compose uden proxy-settings:
+
+```bash
+docker compose -f docker-compose.local.yml build
+docker compose -f docker-compose.local.yml up api db
+```
+
+Server/deployment Compose med `nginx-proxy`-settings:
 
 ```bash
 docker compose build

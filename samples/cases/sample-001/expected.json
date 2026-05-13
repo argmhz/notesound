@@ -1,0 +1,13 @@
+{
+  "title": "Replace with first real mobile photo case",
+  "image": "original.jpg",
+  "expected": {
+    "time_signature": "4/4",
+    "notes": [
+      {
+        "midi": 60,
+        "duration_beats": 1.0
+      }
+    ]
+  }
+}

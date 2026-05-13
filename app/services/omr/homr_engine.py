@@ -17,6 +17,8 @@ class HomrEngine(OmrEngine):
         if shutil.which(self.binary) is None:
             raise OmrEngineError("omr_unavailable", f"OMR binary '{self.binary}' is not available.")
 
+        image_path = image_path.resolve()
+        output_dir = output_dir.resolve()
         output_dir.mkdir(parents=True, exist_ok=True)
         command = [self.binary, str(image_path)]
         try:

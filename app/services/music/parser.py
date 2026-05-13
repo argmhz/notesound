@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 
 from defusedxml.ElementTree import fromstring as secure_fromstring
-from music21 import converter, note, pitch, stream
+from music21 import chord, converter, note, pitch, stream
 
 from app.domain.schemas import (
     ArtifactRef,
@@ -61,60 +61,75 @@ def _same_pitch(left: PitchModel, right: PitchModel) -> bool:
     return (left.step, left.alter, left.octave, left.midi) == (right.step, right.alter, right.octave, right.midi)
 
 
+def _tie_key(timeline_note: _TimelineNote) -> tuple[int, str, int, int, int | None]:
+    pitch_model = timeline_note.pitch_model
+    return (timeline_note.source_staff, pitch_model.step, pitch_model.alter, pitch_model.octave, pitch_model.midi)
+
+
 def _merge_tied_notes(notes: list[_TimelineNote]) -> list[_TimelineNote]:
     merged: list[_TimelineNote] = []
-    active: _TimelineNote | None = None
+    active_by_key: dict[tuple[int, str, int, int, int | None], _TimelineNote] = {}
 
     for timeline_note in notes:
+        key = _tie_key(timeline_note)
         if timeline_note.tie == "start":
             candidate = _TimelineNote(**timeline_note.__dict__)
             merged.append(candidate)
-            active = candidate
+            active_by_key[key] = candidate
             continue
 
+        active = active_by_key.get(key)
         if timeline_note.tie in {"continue", "stop"} and active and _same_pitch(active.pitch_model, timeline_note.pitch_model):
             active.duration_beats += timeline_note.duration_beats
             if timeline_note.tie == "stop":
                 active.tie = None
-                active = None
+                active_by_key.pop(key, None)
             else:
                 active.tie = "continue"
             continue
 
         candidate = _TimelineNote(**timeline_note.__dict__)
-        candidate.tie = None if candidate.tie == "stop" else candidate.tie
+        if candidate.tie in {"continue", "stop"}:
+            candidate.tie = None
         merged.append(candidate)
-        active = candidate if candidate.tie in {"start", "continue"} else None
+        if candidate.tie in {"start", "continue"}:
+            active_by_key[key] = candidate
 
     return merged
 
 
 def melody_from_score(score: stream.Score) -> MelodyModel:
     notes: list[_TimelineNote] = []
-    part_index = 0
-    for part in score.parts:
+    for part_index, part in enumerate(score.parts):
         for element in part.recurse().notesAndRests:
-            if not isinstance(element, note.Note):
+            if isinstance(element, note.Note):
+                element_notes = [element]
+            elif isinstance(element, chord.Chord):
+                element_notes = list(element.notes)
+            else:
                 continue
             measure = element.getContextByClass(stream.Measure)
-            notes.append(
-                _TimelineNote(
-                    start_beat=float(element.getOffsetInHierarchy(part)),
-                    measure=measure.number if measure is not None else None,
-                    beat=float(element.beat) if element.beat is not None else None,
-                    duration_beats=float(element.duration.quarterLength),
-                    pitch_model=_build_pitch_model(element.pitch),
-                    tie=element.tie.type if element.tie else None,
-                    accidental=element.pitch.accidental.name if element.pitch.accidental else None,
-                    source_staff=part_index,
-                    confidence=0.75,
+            start_beat = float(element.getOffsetInHierarchy(part))
+            beat = float(element.beat) if element.beat is not None else None
+            duration_beats = float(element.duration.quarterLength)
+            for element_note in element_notes:
+                notes.append(
+                    _TimelineNote(
+                        start_beat=start_beat,
+                        measure=measure.number if measure is not None else None,
+                        beat=beat,
+                        duration_beats=duration_beats,
+                        pitch_model=_build_pitch_model(element_note.pitch),
+                        tie=element_note.tie.type if element_note.tie else None,
+                        accidental=element_note.pitch.accidental.name if element_note.pitch.accidental else None,
+                        source_staff=part_index,
+                        confidence=0.75,
+                    )
                 )
-            )
-        if notes:
-            break
-        part_index += 1
 
-    merged_notes = _merge_tied_notes(sorted(notes, key=lambda item: item.start_beat))
+    merged_notes = _merge_tied_notes(
+        sorted(notes, key=lambda item: (item.start_beat, item.source_staff, item.pitch_model.midi or -1))
+    )
     return MelodyModel(
         notes=[
             MelodyNote(

@@ -396,6 +396,46 @@ specs/
 - Mobilfoto-perspektiv er kun simpelt håndteret i MVP
 - Melodi udledes som første parsebare note-sekvens, ikke fuld musikalsk topstemme-analyse
 - Tablatur er endnu ikke implementeret
+- OMR kan fejllæse rytmer og taktart, især hvis preprocess-output skjuler nodehoveder, bjælker eller flags
+
+## Næste prioritet
+
+Næste fase starter med nummer 1.
+
+1. Etabler et lille test-dataset og eval-grundlag
+- Saml 5-10 rigtige mobilbilleder af nodeark.
+- Inkludér variationer: original, beskåret, skævt, bedre lys, tæt på og længere afstand.
+- Hav et simpelt inbox-flow, hvor et billede kan lægges i en mappe og behandles lokalt til case-output uden API eller database.
+- Lav manuelt forventet output for mindst 1-2 billeder med tonehøjder, rytmer og taktart.
+- Gem originalbilleder og forventede resultater som testfixtures eller dokumenterede sample cases.
+- Brug datasættet til at vurdere, om ændringer faktisk forbedrer OMR-kvalitet.
+
+2. Tilføj OMR input modes
+- Udvid upload/options med `preprocess_mode`.
+- Understøt mindst `original`, `enhanced`, `binary` og `deskewed_color`.
+- Gem hver inputvariant som artifact, så output kan sammenlignes visuelt.
+- Brug modes til A/B-test mod samme nodefoto i stedet for at gætte på én preprocess-strategi.
+
+3. Tilføj eval/debug flow
+- Lav et script eller endpoint, der kører samme billede gennem flere preprocess modes.
+- Rapportér antal noter, taktart, duration distribution, MusicXML-parse-status og warnings.
+- Brug rapporten til at sammenligne OMR-output på tværs af modes.
+
+4. Forbedr rytme-normalisering
+- Undersøg om rytmefejl skyldes OMR-input eller MusicXML-normalisering.
+- Hvis `homr` konsekvent skalerer duration ens, kan en forsigtig postprocess-korrektion vurderes.
+- Undgå hardcoded rettelser før flere dataset-eksempler viser samme fejlmønster.
+
+5. Gør API’et mere klientklart
+- Udvid status/result med mere debug-info, hvor det hjælper mobilklienten.
+- Behold artifact-links til original, preview, preprocess, MusicXML og audio.
+- Tilføj eventuelt MIDI-output ved siden af WAV.
+- Opdater Bruno collection med requests for preprocess mode, audio og artifact-inspektion.
+
+6. Udvid senere til tablatur
+- Start først når pitch og timing er stabilt nok.
+- Tilføj instrumentprofil, tuning, capo og max-fret som input.
+- Implementér tablatur som separat `ScoreModel -> TabProjection`, ikke som del af OMR-laget.
 
 ## Udvidelsesplan efter MVP
 
